@@ -46,15 +46,12 @@ namespace МиАОКГ
             this.labelY = new System.Windows.Forms.Label();
             this.labelX = new System.Windows.Forms.Label();
             this.labelMinX = new System.Windows.Forms.Label();
-            this.labelZeroX = new System.Windows.Forms.Label();
             this.labelMaxX = new System.Windows.Forms.Label();
             this.labelMinY = new System.Windows.Forms.Label();
-            this.labelZeroY = new System.Windows.Forms.Label();
             this.labelMaxY = new System.Windows.Forms.Label();
             this.labelMinAlfa = new System.Windows.Forms.Label();
             this.labelMaxZ = new System.Windows.Forms.Label();
             this.labelMinZ = new System.Windows.Forms.Label();
-            this.labelZeroZ = new System.Windows.Forms.Label();
             this.labelMaxAlfa = new System.Windows.Forms.Label();
             this.labelMaxBeta = new System.Windows.Forms.Label();
             this.labelMaxGamma = new System.Windows.Forms.Label();
@@ -68,6 +65,12 @@ namespace МиАОКГ
             this.CurValueBeta = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.label0 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.vX = new System.Windows.Forms.Label();
+            this.vY = new System.Windows.Forms.Label();
+            this.vZ = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarGamma)).BeginInit();
@@ -145,7 +148,6 @@ namespace МиАОКГ
             // 
             this.trackBarZ.Location = new System.Drawing.Point(36, 427);
             this.trackBarZ.Maximum = 60;
-            this.trackBarZ.Minimum = -60;
             this.trackBarZ.Name = "trackBarZ";
             this.trackBarZ.Size = new System.Drawing.Size(285, 45);
             this.trackBarZ.TabIndex = 7;
@@ -155,7 +157,6 @@ namespace МиАОКГ
             // 
             this.trackBarY.Location = new System.Drawing.Point(36, 376);
             this.trackBarY.Maximum = 60;
-            this.trackBarY.Minimum = -60;
             this.trackBarY.Name = "trackBarY";
             this.trackBarY.Size = new System.Drawing.Size(285, 45);
             this.trackBarY.TabIndex = 8;
@@ -166,7 +167,6 @@ namespace МиАОКГ
             this.trackBarX.Cursor = System.Windows.Forms.Cursors.Default;
             this.trackBarX.Location = new System.Drawing.Point(36, 325);
             this.trackBarX.Maximum = 60;
-            this.trackBarX.Minimum = -60;
             this.trackBarX.Name = "trackBarX";
             this.trackBarX.Size = new System.Drawing.Size(285, 45);
             this.trackBarX.TabIndex = 9;
@@ -231,18 +231,9 @@ namespace МиАОКГ
             this.labelMinX.AutoSize = true;
             this.labelMinX.Location = new System.Drawing.Point(36, 355);
             this.labelMinX.Name = "labelMinX";
-            this.labelMinX.Size = new System.Drawing.Size(24, 15);
+            this.labelMinX.Size = new System.Drawing.Size(13, 15);
             this.labelMinX.TabIndex = 16;
-            this.labelMinX.Text = "-60";
-            // 
-            // labelZeroX
-            // 
-            this.labelZeroX.AutoSize = true;
-            this.labelZeroX.Location = new System.Drawing.Point(172, 358);
-            this.labelZeroX.Name = "labelZeroX";
-            this.labelZeroX.Size = new System.Drawing.Size(13, 15);
-            this.labelZeroX.TabIndex = 17;
-            this.labelZeroX.Text = "0";
+            this.labelMinX.Text = "0";
             // 
             // labelMaxX
             // 
@@ -258,18 +249,9 @@ namespace МиАОКГ
             this.labelMinY.AutoSize = true;
             this.labelMinY.Location = new System.Drawing.Point(36, 406);
             this.labelMinY.Name = "labelMinY";
-            this.labelMinY.Size = new System.Drawing.Size(24, 15);
+            this.labelMinY.Size = new System.Drawing.Size(13, 15);
             this.labelMinY.TabIndex = 19;
-            this.labelMinY.Text = "-60";
-            // 
-            // labelZeroY
-            // 
-            this.labelZeroY.AutoSize = true;
-            this.labelZeroY.Location = new System.Drawing.Point(172, 406);
-            this.labelZeroY.Name = "labelZeroY";
-            this.labelZeroY.Size = new System.Drawing.Size(13, 15);
-            this.labelZeroY.TabIndex = 20;
-            this.labelZeroY.Text = "0";
+            this.labelMinY.Text = "0";
             // 
             // labelMaxY
             // 
@@ -303,18 +285,9 @@ namespace МиАОКГ
             this.labelMinZ.AutoSize = true;
             this.labelMinZ.Location = new System.Drawing.Point(36, 457);
             this.labelMinZ.Name = "labelMinZ";
-            this.labelMinZ.Size = new System.Drawing.Size(24, 15);
+            this.labelMinZ.Size = new System.Drawing.Size(13, 15);
             this.labelMinZ.TabIndex = 24;
-            this.labelMinZ.Text = "-60";
-            // 
-            // labelZeroZ
-            // 
-            this.labelZeroZ.AutoSize = true;
-            this.labelZeroZ.Location = new System.Drawing.Point(172, 457);
-            this.labelZeroZ.Name = "labelZeroZ";
-            this.labelZeroZ.Size = new System.Drawing.Size(13, 15);
-            this.labelZeroZ.TabIndex = 25;
-            this.labelZeroZ.Text = "0";
+            this.labelMinZ.Text = "0";
             // 
             // labelMaxAlfa
             // 
@@ -433,11 +406,77 @@ namespace МиАОКГ
             this.label0.Size = new System.Drawing.Size(0, 15);
             this.label0.TabIndex = 38;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(425, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 41);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Построить чертеж";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(45, 503);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(70, 19);
+            this.radioButton1.TabIndex = 40;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "1 октант";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(206, 503);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(70, 19);
+            this.radioButton2.TabIndex = 41;
+            this.radioButton2.Text = "7 октант";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // vX
+            // 
+            this.vX.AutoSize = true;
+            this.vX.Location = new System.Drawing.Point(463, 325);
+            this.vX.Name = "vX";
+            this.vX.Size = new System.Drawing.Size(13, 15);
+            this.vX.TabIndex = 42;
+            this.vX.Text = "0";
+            // 
+            // vY
+            // 
+            this.vY.AutoSize = true;
+            this.vY.Location = new System.Drawing.Point(463, 376);
+            this.vY.Name = "vY";
+            this.vY.Size = new System.Drawing.Size(13, 15);
+            this.vY.TabIndex = 43;
+            this.vY.Text = "0";
+            // 
+            // vZ
+            // 
+            this.vZ.AutoSize = true;
+            this.vZ.Location = new System.Drawing.Point(463, 427);
+            this.vZ.Name = "vZ";
+            this.vZ.Size = new System.Drawing.Size(13, 15);
+            this.vZ.TabIndex = 44;
+            this.vZ.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 544);
+            this.Controls.Add(this.vZ);
+            this.Controls.Add(this.vY);
+            this.Controls.Add(this.vX);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label0);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.CurValueBeta);
@@ -451,15 +490,12 @@ namespace МиАОКГ
             this.Controls.Add(this.labelMaxGamma);
             this.Controls.Add(this.labelMaxBeta);
             this.Controls.Add(this.labelMaxAlfa);
-            this.Controls.Add(this.labelZeroZ);
             this.Controls.Add(this.labelMinZ);
             this.Controls.Add(this.labelMaxZ);
             this.Controls.Add(this.labelMinAlfa);
             this.Controls.Add(this.labelMaxY);
-            this.Controls.Add(this.labelZeroY);
             this.Controls.Add(this.labelMinY);
             this.Controls.Add(this.labelMaxX);
-            this.Controls.Add(this.labelZeroX);
             this.Controls.Add(this.labelMinX);
             this.Controls.Add(this.labelX);
             this.Controls.Add(this.labelY);
@@ -511,15 +547,12 @@ namespace МиАОКГ
         private System.Windows.Forms.Label labelY;
         private System.Windows.Forms.Label labelX;
         private System.Windows.Forms.Label labelMinX;
-        private System.Windows.Forms.Label labelZeroX;
         private System.Windows.Forms.Label labelMaxX;
         private System.Windows.Forms.Label labelMinY;
-        private System.Windows.Forms.Label labelZeroY;
         private System.Windows.Forms.Label labelMaxY;
         private System.Windows.Forms.Label labelMinAlfa;
         private System.Windows.Forms.Label labelMaxZ;
         private System.Windows.Forms.Label labelMinZ;
-        private System.Windows.Forms.Label labelZeroZ;
         private System.Windows.Forms.Label labelMaxAlfa;
         private System.Windows.Forms.Label labelMaxBeta;
         private System.Windows.Forms.Label labelMaxGamma;
@@ -533,6 +566,12 @@ namespace МиАОКГ
         private System.Windows.Forms.Label CurValueBeta;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label0;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label vX;
+        private System.Windows.Forms.Label vY;
+        private System.Windows.Forms.Label vZ;
     }
 }
 

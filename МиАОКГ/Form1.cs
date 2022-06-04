@@ -39,23 +39,23 @@ namespace МиАОКГ
 
         private void trackBarX_Scroll(object sender, EventArgs e)
         {
-            pictureBox1.Refresh();
-            pictureBox2.Refresh();
-            CurValueX.Text = trackBarX.Value.ToString();
+            //pictureBox1.Refresh();
+            //pictureBox2.Refresh();
+            vX.Text = trackBarX.Value.ToString();
         }
 
         private void trackBarY_Scroll(object sender, EventArgs e)
         {
-            pictureBox1.Refresh();
-            pictureBox2.Refresh();
-            CurValueY.Text = trackBarY.Value.ToString();
+            //pictureBox1.Refresh();
+            //pictureBox2.Refresh();
+            vY.Text = trackBarY.Value.ToString();
         }
 
         private void trackBarZ_Scroll(object sender, EventArgs e)
         {
-            pictureBox1.Refresh();
-            pictureBox2.Refresh();
-            CurValueZ.Text = trackBarZ.Value.ToString();
+            //pictureBox1.Refresh();
+            //pictureBox2.Refresh();
+            vZ.Text = trackBarZ.Value.ToString();
         }
 
         private void trackBarAlfa_Scroll(object sender, EventArgs e)
@@ -152,6 +152,52 @@ namespace МиАОКГ
             double angled = angle;
             angled = (angled / 180) * Math.PI;
             return angled;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Refresh();
+            pictureBox2.Refresh();
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                trackBarX.Minimum = 0;
+                trackBarX.Maximum = 60;
+                trackBarY.Minimum = 0;
+                trackBarY.Maximum = 60;
+                trackBarZ.Minimum = 0;
+                trackBarZ.Maximum = 60;
+                labelMinX.Text = "0";
+                labelMaxX.Text = "60";
+                trackBarX.Value = 0;
+                labelMinY.Text = "0";
+                labelMaxY.Text = "60";
+                trackBarY.Value = 0;
+                labelMinZ.Text = "0";
+                labelMaxZ.Text = "60";
+                trackBarZ.Value = 0;
+            }
+            else if (radioButton2.Checked)
+            {
+                trackBarX.Minimum = -60;
+                trackBarX.Maximum = 0;
+                trackBarY.Minimum = -60;
+                trackBarY.Maximum = 0;
+                trackBarZ.Minimum = -60;
+                trackBarZ.Maximum = 0;
+                labelMinX.Text = "-60";
+                labelMaxX.Text = "0";
+                trackBarX.Value = 0;
+                labelMinY.Text = "-60";
+                labelMaxY.Text = "0";
+                trackBarY.Value = 0;
+                labelMinZ.Text = "-60";
+                labelMaxZ.Text = "0";
+                trackBarZ.Value = 0;
+            }
         }
     }
 }
